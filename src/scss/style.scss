@@ -162,3 +162,29 @@ header{
 		text-decoration: underline;
 	}
 }
+
+body{
+	background-color: #ccc;
+}
+
+.card{
+	margin: 5px;
+}
+
+.card-header{
+	display: flex;
+	justify-content: space-between;
+	background-color: #fff;
+}
+
+.card-header-title{
+	text-transform: uppercase;
+}
+
+.btn-card-title{
+	border: 1px solid #ccc;
+	background-color: #fff;
+	padding: 1px 5px;
+	font-size: 0.8em;
+	color: #ccc;
+}
