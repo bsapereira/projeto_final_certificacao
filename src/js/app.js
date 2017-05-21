@@ -7,14 +7,13 @@ $(function(){
 		}
 	});
 
-	$('.dropdown-link').on('click', function(){
+	$('.user-info-show').on('click', function(){
 		if($('#caret').hasClass("fa-caret-down")){
 			$('#caret').removeClass("fa-caret-down").addClass("fa-caret-right").css("color", "#fff");
-			$('.header-user').addClass('header-user-moved');
-			$('.header-user-info').addClass('header-user-moved');
+			$('.header-userarea').addClass('header-userarea-moved');
 		} else {
 			$('#caret').removeClass("fa-caret-right").addClass("fa-caret-down").css("color", "#5d5d5d");
-			$('.header-user').removeClass('header-user-moved');
+			$('.header-userarea').removeClass('header-userarea-moved');
 		}
 	});
 
