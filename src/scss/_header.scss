@@ -17,6 +17,9 @@
 	justify-content: space-between;
 	height: $header-height;
 	background-color:$sidebar-bg;
+	@include media-breakpoint-up('lg'){
+		justify-content: flex-end;		
+	}
 }
 
 /* Header Sidebar */
@@ -32,6 +35,9 @@
 			background-color:#878787;
 		}
 	}
+	@include media-breakpoint-up('lg'){
+		display: none;
+	}
 }
 
 /* Header Userarea*/
@@ -46,9 +52,21 @@
 	align-items: center;
 	margin-right: 5px;
 	color: $general-color;
+	font-size: $header-user-size;
+	font-weight: bold;
 	transition: margin-right 1s;
 	i{
 		margin-left: 2px;
+	}
+	span{
+		padding: 0 10px;
+		color: $user-info-color;
+	}
+	@include media-breakpoint-up('lg'){
+		margin-right: $header-user-info-width-margin-lg;
+		span{
+			border-right: 1px solid $general-color;
+		}
 	}
 }
 
@@ -58,16 +76,26 @@
 	position: fixed;
 	right: -$header-user-info-width-margin;
 	color: $user-info-color;
-	font-size: 0.77em;
+	font-size: $header-user-size;
 	transition: right 1s;
+	@include media-breakpoint-up('lg'){
+		max-width: $header-user-info-width-margin-lg;
+		right: 0;
+	}
 }
 
 .header-userarea-moved{
 	.header-user-info{
 		right: 0;
+		span{
+			border-right: 1px solid $general-color;
+		}
 	}
 	.header-user{
 		margin-right: $header-user-info-width-margin;
+		@include media-breakpoint-up('lg'){
+			margin-right: $header-user-info-width-margin-lg;
+		}
 	}
 }
 
@@ -85,7 +113,7 @@
 	&:last-child{
 		border: 0;
 	}
-	&:first-child{
-		font-weight: bold;
+	@include media-breakpoint-up('lg'){
+		padding: 0 10px;
 	}
 }

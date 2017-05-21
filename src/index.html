@@ -11,7 +11,7 @@
 		<div class="sidebar">
 			<div class="sidebar-header">
 				<img src="img/logo.png" class="img-fluid" alt="">
-			</div>
+			</div> <!-- sidebar-header -->
 			<div class="sidebar-content">
 				<ul class="nav">
 					<li class="nav-item">
@@ -40,128 +40,129 @@
 						Settings
 					</li>
 				</ul>
-			</div>
-		</div>
+			</div> <!-- sidebar-content -->
+		</div> <!-- sidebar -->
 	</nav>
-	<header>
-		<div class="header">
-			<div class="header-sidebar">
-				<a href="javascript:void(0);" class="sidebar-link"><i class="fa fa-navicon"></i></a>
-			</div>
-			<div class="header-userarea">
-				<a href="javascript:void(0)" class="user-info-show">
-				<div class="header-user">
-						<!--<img src="img/user-photo.png" class="img-circle">-->
-						<p class="imagem"></p> <i class="fa fa-caret-down" id="caret"></i>
+	<div class="content">
+		<header>
+			<div class="header">
+				<div class="header-sidebar">
+					<a href="javascript:void(0);" class="sidebar-link"><i class="fa fa-navicon"></i></a>
 				</div>
-				</a>
-				<div class="header-user-info">
-					<ul class="user-list">
-						<li class="user-list-item">John Doe</li>
-						<li class="user-list-item">Sign Off</li>
-						<li class="user-list-item">Support</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</header>
-	<main>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col">
-					<div class="card">
-						<div class="card-header">
-							<span class="card-header-title">Visitors:</span>
-							<button class="btn btn-card-title">Days <i class="fa fa-caret-down"></i></button>
-						</div>
-						<div class="card-block">
-							<img src="img/graph-visitors.png" alt="" class="img-fluid">
-						</div>
+				<div class="header-userarea">
+					<a href="javascript:void(0)" class="user-info-show">
+					<div class="header-user">
+							<!--<img src="img/user-photo.png" class="img-circle">-->
+							<p class="imagem"></p>
+							<span>John Doe<i class="fa fa-caret-down" id="caret"></i></span>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card">
-						<div class="card-header">
-							<span class="card-header-title">Subscriptions:</span>
-							<button class="btn btn-card-title">Months <i class="fa fa-caret-down"></i></button>
-						</div>
-						<div class="card-block">
-							<img src="img/graph-subscriptions.png" alt="" class="img-fluid">
-						</div>
+					</a>
+					<div class="header-user-info">
+						<ul class="user-list">
+							<li class="user-list-item">Sign Off</li>
+							<li class="user-list-item">Support</li>
+						</ul>
 					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col">
-					<div class="card">
-						<div class="card-header">
-							<span class="card-header-title">Messages:</span>
-							<div>
-								<button class="btn btn-card-title"><i class="fa fa-caret-up"></i></button>
-								<button class="btn btn-card-title"><i class="fa fa-caret-down"></i></button>
+				</div> <!-- header-userarea -->
+			</div> <!-- header -->
+		</header>
+		<main>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<span class="card-header-title">Visitors:</span>
+								<button class="btn btn-card-title">Days <i class="fa fa-caret-down"></i></button>
+							</div>
+							<div class="card-block">
+								<img src="img/graph-visitors.png" alt="" class="img-fluid">
 							</div>
 						</div>
-						<div class="card-block">
-							<div class="message">
-								<div class="message-image">
-									<div class="imagem"></div>
+					</div> <!-- col: visitors -->
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<span class="card-header-title">Subscriptions:</span>
+								<button class="btn btn-card-title">Months <i class="fa fa-caret-down"></i></button>
+							</div>
+							<div class="card-block">
+								<img src="img/graph-subscriptions.png" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div> <!-- col: subscription -->
+				</div> <!-- row -->
+
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<span class="card-header-title">Messages:</span>
+								<div>
+									<button class="btn btn-card-title"><i class="fa fa-caret-up"></i></button>
+									<button class="btn btn-card-title"><i class="fa fa-caret-down"></i></button>
 								</div>
-								<div class="message-body">
-									<div class="message-user">
-										Jane Doe <i class="fa fa-cog"></i>
+							</div>
+							<div class="card-block">
+								<div class="message">
+									<div class="message-image">
+										<div class="imagem"></div>
 									</div>
-									<div class="message-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore doloribus omnis dignissimos quidem sit debitis ipsum nisi ea consequatur rerum voluptas explicabo ut nulla corporis, saepe cum doloremque voluptatum maxime!
+									<div class="message-body">
+										<div class="message-user">
+											Jane Doe <i class="fa fa-cog"></i>
+										</div>
+										<div class="message-text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore doloribus omnis dignissimos quidem sit debitis ipsum nisi ea consequatur rerum voluptas explicabo ut nulla corporis, saepe cum doloremque voluptatum maxime!
+										</div>
+									</div>
+								</div>
+
+								<div class="message">
+									<div class="message-image">
+										<div class="imagem"></div>
+									</div>
+									<div class="message-body">
+										<div class="message-user">
+											John Doe <i class="fa fa-cog"></i>
+										</div>
+										<div class="message-text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora aliquam, eos veritatis mollitia, doloribus cum voluptate porro cumque natus nostrum. Ut reprehenderit et ab ullam hic ratione? Sequi, aperiam? Cupiditate.
+										</div>
+									</div>
+								</div>
+
+								<div class="message">
+									<div class="message-image">
+										<div class="imagem"></div>									
+									</div>
+									<div class="message-body">
+										<span class="message-user">
+											Alex Doe <i class="fa fa-cog"></i>
+										</span>
+										<span class="message-text">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ratione voluptas expedita quidem deleniti consequuntur sunt dolorum similique vero voluptatem quae, laudantium, odit eum error? Nihil quod rem nesciunt reprehenderit!
+										</span>
 									</div>
 								</div>
 							</div>
-
-							<div class="message">
-								<div class="message-image">
-									<div class="imagem"></div>
-								</div>
-								<div class="message-body">
-									<div class="message-user">
-										John Doe <i class="fa fa-cog"></i>
-									</div>
-									<div class="message-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora aliquam, eos veritatis mollitia, doloribus cum voluptate porro cumque natus nostrum. Ut reprehenderit et ab ullam hic ratione? Sequi, aperiam? Cupiditate.
-									</div>
-								</div>
+						</div>
+					</div> <!-- col: message -->
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<span class="card-header-title">Overview:</span>
 							</div>
-
-							<div class="message">
-								<div class="message-image">
-									<div class="imagem"></div>									
-								</div>
-								<div class="message-body">
-									<span class="message-user">
-										Alex Doe <i class="fa fa-cog"></i>
-									</span>
-									<span class="message-text">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ratione voluptas expedita quidem deleniti consequuntur sunt dolorum similique vero voluptatem quae, laudantium, odit eum error? Nihil quod rem nesciunt reprehenderit!
-									</span>
-								</div>
+							<div class="card-block">
+								<img src="img/graph-overview.png" alt="" class="img-fluid">
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="card">
-						<div class="card-header">
-							<span class="card-header-title">Overview:</span>
-						</div>
-						<div class="card-block">
-							<img src="img/graph-overview.png" alt="" class="img-fluid">
-						</div>
-					</div>
-				</div>
-			</div>
+					</div> <!-- col: overview -->
+				</div> <!-- row -->
 
-		</div>
-	</main>
-
+			</div> <!-- container-fluid -->
+		</main>
+	</div> <!-- content -->
 <script src="js/main.js"></script>
 <script src="js/app.js"></script>
 

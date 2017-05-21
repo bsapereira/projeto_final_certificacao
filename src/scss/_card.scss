@@ -10,11 +10,16 @@
 /* Colunas */
 .col{
 	@include make-col(12);
+	@include media-breakpoint-up('sm'){
+		@include make-col(6);
+		padding: 0;
+	}
 }
 
 /* Card */
 .card{
-	margin: 5px;
+	height: $card-height;
+	margin: $card-gutter;
 	border: 0;
 }
 
@@ -58,9 +63,13 @@
 		content: '';
 		display: block;
 		width: 0;
-		height: 90px;
-		margin-top: $message-lines-margin;
+		height: $message-lines-height;
+		margin: $message-lines-margin 0;
 		border: 1px solid $img-bg;
+		@include media-breakpoint-up('lg'){
+			height: $message-lines-height-lg;
+			margin: $message-lines-margin-lg 0;
+		}
 	}
 }
 
@@ -68,6 +77,9 @@
 	width: 85%;
 	height: $message-text-mHeight + 4*$message-lines-margin;
 	margin-left: 25px;
+	@include media-breakpoint-up('lg'){
+		height: $message-text-mHeight-lg + 4*$message-lines-margin-lg;	
+	}
 }
 
 .message-user{
@@ -92,4 +104,9 @@
 	font-size: 0.8em;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	@include media-breakpoint-up('lg'){
+		line-height: $message-text-mHeight-lg/$message-text-lines-lg;     
+		max-height: $message-text-mHeight-lg;     
+		-webkit-line-clamp: $message-text-lines-lg;
+	}
 }

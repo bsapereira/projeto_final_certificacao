@@ -3,31 +3,58 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
+/* Cores */
+$general-color: #7a7a7a;
+$font-color: #5d5d5d;
+$user-info-color: #e7e7e7;
+
 $body-bg: #f6f6f6;
 $img-bg: #d3d3d3;
-
 $sidebar-bg: #353535;
 $sidebar-header-bg: #282828;
-$nav-item-size: 3em;
-$nav-item-border-dashboard: 2px solid #07c638;
-$nav-item-border-message: 2px solid #09aac7;
-$nav-item-border-analytics: 2px solid #ddbe10;
-$nav-item-border-settings: 2px solid #fc4236;
+
 $nav-item-bg-selected: #3f3f3f;
 $nav-item-color-selected: #fff;
 $nav-item-bg-hover: #585858;
 $nav-item-color-hover: #fff;
 $notification-bg: #ff0000;
 
+/* Dimensão e Posição */
 $sidebar-width-left-offset: 160px;
+$content-width: calc(100% - #{$sidebar-width-left-offset});
+
 $header-height: 60px;
-$header-user-info-width-margin: 175px;
+$header-user-info-width-margin: 110px;
+$header-user-info-width-margin-lg: 132px;
 
-$message-text-mHeight: 110px;
-$message-text-lines: 5;
+$card-gutter: 5px;
+$card-height: calc(100% - #{$card-gutter});
 
-$message-lines-margin: 10px;
+$message-lines-height: 30px;
+$message-lines-margin: $message-lines-height/5;
+$message-text-mHeight: $message-lines-height + 2*$message-lines-margin;
+$message-text-lines: 3;
 
-$general-color: #7a7a7a;
-$user-info-color: #e7e7e7;
-$font-color: #5d5d5d;
+$message-lines-height-lg: 60px;
+$message-lines-margin-lg: $message-lines-height-lg/10;
+$message-text-mHeight-lg: $message-lines-height-lg + 2*$message-lines-margin-lg;
+$message-text-lines-lg: 3;
+
+
+/* Border */
+$nav-item-border-dashboard: 2px solid #07c638;
+$nav-item-border-message: 2px solid #09aac7;
+$nav-item-border-analytics: 2px solid #ddbe10;
+$nav-item-border-settings: 2px solid #fc4236;
+
+/* Font */
+$nav-item-size: 3em;
+$header-user-size: 0.77em
+
+
+
+
+
+
+
+

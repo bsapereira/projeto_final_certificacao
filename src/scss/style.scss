@@ -18,3 +18,15 @@ body{
 	border-radius: 50%;
 	background-color: $img-bg;
 }
+
+.content{
+	margin: 0;
+	padding: 0;
+}
+
+@include media-breakpoint-up('lg'){
+	.content{
+		width: $content-width;
+		margin-left: $sidebar-width-left-offset;
+	}	
+}

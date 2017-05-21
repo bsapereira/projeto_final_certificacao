@@ -21,6 +21,9 @@
 	z-index: 1001;
 	background-color: $sidebar-bg;
 	transition: left .2s;
+	@include media-breakpoint-up('lg'){
+		left: 0;
+	}
 }
 
 .sidebar-header{
@@ -83,6 +86,9 @@
 		background-color: $nav-item-bg-hover;
 		color: $nav-item-color-hover;
 	}
+	@include media-breakpoint-up('sm'){
+		font-size: 0.8em;
+	}
 }
 
 /* Nav - Notificação */
@@ -122,6 +128,9 @@
 		bottom: 0;
 		background-color: rgba(0,0,0,0.5);
 		z-index:1000;
+		@include media-breakpoint-up('lg'){
+			display: none;
+		}
 	}
 	.sidebar{
 		left:0;
