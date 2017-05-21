@@ -1,0 +1,129 @@
+/* Sidebar */
+
+/* Content - Index */
+/* 	
+	-> Sidebar
+	-> Nav
+		-> Itens
+			-> Item selecionado
+		-> Notificação
+	-> Offset
+*/
+
+/* Sidebar */
+.sidebar{
+	width: 30%;
+	max-width: $sidebar-width-left-offset;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -$sidebar-width-left-offset;
+	z-index: 1001;
+	background-color: $sidebar-bg;
+	transition: left .2s;
+}
+
+.sidebar-header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $header-height;
+	background-color: $sidebar-header-bg;
+	img{
+		height: $header-height - 10px;
+	}
+}
+
+/* Nav */
+.nav{
+	display: flex;
+	flex-direction: column;
+}
+
+/* Nav - Items */
+.nav-item{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 1.6em 1em;
+	border-bottom: 1px solid $sidebar-header-bg;
+	color: $font-color;
+	font-size: 0.6em;
+	font-weight: bold;
+	i{
+		font-size: $nav-item-size;
+	}
+	&:nth-child(1){
+		border-left: $nav-item-border-dashboard;
+		background-color: $nav-item-bg-selected;
+		color: $nav-item-color-selected;
+		/* Nav - Item - Item selecionado */
+		&:after{
+			content:"";
+		    height:0;
+		    width:0;
+		    position:absolute;
+		    right:0;
+		    border:5px solid transparent;
+		    border-right: 5px solid #fff;
+		}
+	}
+	&:nth-child(2){
+		border-left: $nav-item-border-message;		
+	}
+	&:nth-child(3){
+		border-left: $nav-item-border-analytics;		
+	}
+	&:nth-child(4){
+		border-left: $nav-item-border-settings;		
+	}
+	&:hover{
+		background-color: $nav-item-bg-hover;
+		color: $nav-item-color-hover;
+	}
+}
+
+/* Nav - Notificação */
+.notification {
+     display: flex;   
+     align-items: center;  
+}
+
+.notification-circle {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 17px;  			//Define largura da badge
+    height: 17px;				//Define altura da badge	
+    margin-top: -$nav-item-size + 0.5em;		//font-size - 0.5em
+	margin-left: -$nav-item-size + 1em;		//notification-circle.margin-left + notification-block.margin-left = -font-size
+	z-index: 2;
+	border-radius: 50%;
+  	background-color: $notification-bg; 
+    color: #fff;
+}
+
+.notification-block {
+    margin-left: -$nav-item-size + 2em;   
+    margin-bottom: 0;
+    z-index: -1;  
+}
+
+/* Offset */
+.open-sidebar{
+	&:after{
+		content:"";
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.5);
+		z-index:1000;
+	}
+	.sidebar{
+		left:0;
+	}
+}

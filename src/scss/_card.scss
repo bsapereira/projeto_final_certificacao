@@ -1,0 +1,95 @@
+/* Card */
+
+/* Content - Index */
+/* 	
+	-> Colunas
+	-> Card
+	-> Message card
+*/
+
+/* Colunas */
+.col{
+	@include make-col(12);
+}
+
+/* Card */
+.card{
+	margin: 5px;
+	border: 0;
+}
+
+.card-header{
+	display: flex;
+	justify-content: space-between;
+	border: 0;
+	background-color: $white;
+}
+
+.card-header-title{
+	color: $general-color;
+	text-transform: uppercase;
+}
+
+.btn-card-title{
+	padding: 1px 5px;
+	border: 1px solid #ccc;
+	background-color: $white;
+	color: #ccc;
+	font-size: 0.8em;
+}
+
+/* Mensagem */
+.message{
+	display: flex;
+	&:last-child{
+		.message-image{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+
+.message-image{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	&:after{
+		content: '';
+		display: block;
+		width: 0;
+		height: 90px;
+		margin-top: $message-lines-margin;
+		border: 1px solid $img-bg;
+	}
+}
+
+.message-body{
+	width: 85%;
+	height: $message-text-mHeight + 4*$message-lines-margin;
+	margin-left: 25px;
+}
+
+.message-user{
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	i{
+		margin-left: 5px;
+		color: $general-color;
+		font-size: 0.6em;
+		font-weight: normal;
+	}
+}
+
+.message-text{
+	display: -webkit-box;
+	line-height: $message-text-mHeight/$message-text-lines;     
+	max-height: $message-text-mHeight;     
+	-webkit-line-clamp: $message-text-lines; 
+	-webkit-box-orient: vertical;
+	color: $general-color;
+	font-size: 0.8em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

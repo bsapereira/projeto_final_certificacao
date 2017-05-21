@@ -2,3 +2,32 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+$body-bg: #f6f6f6;
+$img-bg: #d3d3d3;
+
+$sidebar-bg: #353535;
+$sidebar-header-bg: #282828;
+$nav-item-size: 3em;
+$nav-item-border-dashboard: 2px solid #07c638;
+$nav-item-border-message: 2px solid #09aac7;
+$nav-item-border-analytics: 2px solid #ddbe10;
+$nav-item-border-settings: 2px solid #fc4236;
+$nav-item-bg-selected: #3f3f3f;
+$nav-item-color-selected: #fff;
+$nav-item-bg-hover: #585858;
+$nav-item-color-hover: #fff;
+$notification-bg: #ff0000;
+
+$sidebar-width-left-offset: 160px;
+$header-height: 60px;
+$header-user-info-width-margin: 175px;
+
+$message-text-mHeight: 110px;
+$message-text-lines: 5;
+
+$message-lines-margin: 10px;
+
+$general-color: #7a7a7a;
+$user-info-color: #e7e7e7;
+$font-color: #5d5d5d;
