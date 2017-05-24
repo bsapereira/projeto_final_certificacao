@@ -6,7 +6,7 @@ var concat 			= require("gulp-concat");
 var uglify 			= require("gulp-uglify");
 var browserSync = require("browser-sync").create();
 var del 				= require("del");
-
+var image     = require("gulp-image");
 /* Tasks cached */
 gulp.task("cache:css", function() {
 	del("./dist/css/style.css")
@@ -77,7 +77,14 @@ gulp.task("server", function() {
 	gulp.watch("./src/index.html", ['html']);
 });
 
-gulp.task("default", ['sass', 'html', 'js', 'concat-js', 'move-fonts', 'server'])
+/*Task optimiza image*/
+gulp.task("image", function(){
+	gulp.src("./src/img/*")
+	.pipe(image())
+	.pipe(gulp.dest("./dist/img"))
+});
+
+gulp.task("default", ['sass', 'html', 'js', 'concat-js', 'move-fonts', 'server', 'image'])
 
 
 

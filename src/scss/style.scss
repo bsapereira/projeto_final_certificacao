@@ -1,5 +1,7 @@
 @import "../components/bootstrap/scss/bootstrap.scss";
-@import "../../bower_components/components-font-awesome/scss/font-awesome.scss";
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+
+/* All variables are inside bootstrap's _custom.scss file */
 
 @import "sidebar";
 @import "header";
